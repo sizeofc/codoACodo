@@ -6,9 +6,9 @@
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="shorcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preload" href="style.css" as="style" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" as="style">
-    <link rel="preload" href="./images/banner-bg.webp" as="image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="./images/banner-bg.webp" as="image" >
 
     <title>Pelis CaC</title>
     
@@ -52,8 +52,10 @@
        <!-- SECCION TENDENCIAS  -->
     <section class="tendencias-container">
       <h2 class="titulotendencia">Las tendencias de hoy</h3>
-      <div class="tendencias">
-          <div class="card-tendencia">
+      <div id="tendencias" class="tendencias">
+
+
+          <!-- <div class="card-tendencia">
               <img src="./images/1.jpg" alt="1" loading="lazy">
               <p>Iron Man 3</p>
           </div>
@@ -84,11 +86,11 @@
           <div class="card-tendencia">
               <img src="./images/6.jpg" alt="1" loading="lazy">
               <p>imagen 1</p>
-          </div>
+          </div> -->
       </div>
       <div class="paginacion">
-          <button type="button" class="btn-paginacion">Anterior</button>
-          <button type="button" class="btn-paginacion">Siguiente</button>
+          <button type="button" id="btn-atras" class="btn-paginacion">Anterior</button>
+          <button type="button" id="btn-siguiente" class="btn-paginacion">Siguiente</button>
       </div>
       <hr>
   </section>
@@ -96,8 +98,10 @@
   <!-- SECCION LAS MAS ACLAMADAS  -->
   <section class="masAclamadas">
       <h3 class="titulomasAclamadas">Las más aclamadas</h3>
-      <div class="carrucel">
-          <img class="img-aclamadas" src="./images/1.jpg" alt="Iron Man 3" loading="lazy">
+      <div class="carrucel" id="carrucel">
+
+
+          <!-- <img class="img-aclamadas" src="./images/1.jpg" alt="Iron Man 3" loading="lazy">
           <img class="img-aclamadas" src="./images/2.jpg" alt="2" loading="lazy">
           <img class="img-aclamadas" src="./images/3.jpg" alt="3" loading="lazy">
           <img class="img-aclamadas" src="./images/4.jpg" alt="4" loading="lazy">
@@ -114,7 +118,7 @@
           <img class="img-aclamadas" src="./images/5.jpg" alt="5" loading="lazy">
           <img class="img-aclamadas" src="./images/6.jpg" alt="6" loading="lazy">
           <img class="img-aclamadas" src="./images/7.jpg" alt="7" loading="lazy">
-          <img class="img-aclamadas" src="./images/8.jpg" alt="8" loading="lazy">
+          <img class="img-aclamadas" src="./images/8.jpg" alt="8" loading="lazy"> -->
       </div>
   </section>
        
@@ -139,7 +143,7 @@
       </a>
     </footer>
     
-      
+      <script src="/js/scripts.js"></script>
     
 </body>
 </html>
