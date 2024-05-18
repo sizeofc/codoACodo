@@ -79,8 +79,9 @@ async function fetchMoreRated() {
 
     const listRated = results.map(movie => {
         return `
-        <img src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.backdrop_path}" alt="${movie.title}" loading="lazy">
-
+        <a href="detalle.html?id=${movie.id}">
+            <img src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.backdrop_path}" alt="${movie.title}" loading="lazy">
+        </a>
         `
     }).join('');
     document.getElementById('carrucel').innerHTML = listRated;

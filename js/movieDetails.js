@@ -1,3 +1,4 @@
+
 //funcion que se conecta a la api de themoviedb.org y trae las tendencias
 const options = {
     method: 'GET',
@@ -46,3 +47,22 @@ async function fetchDetails() {
 }
 
 fetchDetails();
+
+
+async function fetchMoreRated() {
+    const resp = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=1', options)
+    const data = await resp.json();
+    const { results } = data;
+
+    const listRated = results.map(movie => {
+        return `
+        <a href="detalle.html?id=${movie.id}">
+            <img src="http://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.backdrop_path}" alt="${movie.title}" loading="lazy">
+         </a>
+         `
+    }).join('');
+    document.getElementById('carrucel').innerHTML = listRated;
+
+}
+
+fetchMoreRated();
