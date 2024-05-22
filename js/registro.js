@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
             setSuccessFor(emailInput);
         }
 
-        if (!passwordInput.value.trim()) {
-            setErrorFor(passwordInput, 'Por favor, ingresa tu contraseña');
+        if (!passwordInput.value.trim()|| passwordInput.value.length<6) {
+            setErrorFor(passwordInput, 'ingresa una contraseña valida, debe ser 6 caracteres minimo');
             isValid = false;
         } else {
             setSuccessFor(passwordInput);
@@ -104,4 +104,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const container = document.getElementById('container');
     container.classList.add('active'); // Agrega la clase 'active' para iniciar la animación
+});
+
+
+document.getElementById('iniciar-sesion').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que la página se cambie inmediatamente
+    document.getElementById('container').classList.add('slide-out');
+    setTimeout(function() {
+        window.location.href = 'iniciosesion.html'; // Redirige a la otra página después de 2 segundos
+    }, 500);
 });

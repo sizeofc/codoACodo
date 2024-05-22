@@ -104,3 +104,16 @@ button:hover {
 small.error{
     visibility: visible;
 }
+
+.iniciarSesion{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#container {
+    transition: transform 0.5s ease-in-out;
+}
+
+#container.slide-out {
+    transform: translateX(-200%);
+}
