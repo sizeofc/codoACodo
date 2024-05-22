@@ -111,6 +111,10 @@ document.getElementById('iniciar-sesion').addEventListener('click', function(eve
     event.preventDefault(); // Evita que la página se cambie inmediatamente
     document.getElementById('container').classList.add('slide-out');
     setTimeout(function() {
-        window.location.href = 'iniciosesion.html'; // Redirige a la otra página después de 2 segundos
+        window.location.href = 'iniciosesion.html'; // Redirige a la otra página después de  segundos
     }, 500);
+});
+
+window.addEventListener('pageshow', function(event) {
+    document.getElementById('container').classList.remove('slide-out');
 });
