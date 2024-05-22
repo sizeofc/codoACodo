@@ -7,7 +7,7 @@ body {
 
 .container {
     max-width: 400px;
-    margin: auto;
+    margin: 10px auto auto auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -19,7 +19,7 @@ body {
 }
 
 .container.active {
-    transform: scale(1); /* Cuando se activa la clase 'active', el contenedor vuelve a su tamaño normal */
+    transform: scale(0.8); /* Cuando se activa la clase 'active', el contenedor vuelve a su tamaño normal */
     opacity: 1; /* El contenedor se vuelve visible */
 }
 
